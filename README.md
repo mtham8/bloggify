@@ -1,2 +1,3 @@
-# django_blog
+# Bloggify
+
 Minimal blog application
