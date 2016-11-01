@@ -1,0 +1,3 @@
+# Bloggify
+
+Minimal blog application
