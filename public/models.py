@@ -21,3 +21,8 @@ class Post(models.Model):
     self.save()
   def __str__(self):
     return self.title
+
+# Model to post comments
+class Comment(models.Model):
+  text = models.CharField(max_length=200)
+  post = models.ForeignKey(Post)
