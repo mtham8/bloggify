@@ -3,16 +3,21 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>DIY App</title>
+  <title>DIY App CB</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/public.css' %}">
 </head>
 <body>
   <div class="container">
     <div class="flex-row">
+      <div><h1>DIY App Cookbook</h1></div>
+    </div>
+    <div class="flex-row">
       <div>
-        <h1><a href="/">DIY App Cookbook</a></h1>
-        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="{% url 'post_new' %}"><span class="glyphicon glyphicon-plus"></span></a> Add a new recipe
+      </div>
+      <div style="padding-left: 10px">
+        <a href="/"><span class="glyphicon glyphicon-globe"></span></a> Back to Main
       </div>
     </div>
     <div class="flex-row">

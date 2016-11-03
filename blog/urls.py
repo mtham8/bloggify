@@ -17,8 +17,6 @@ from django.conf.urls import include, url
 
 from django.contrib import admin
 
-# TODO: add ^post/(\d+)/$ for posts
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('public.urls')),

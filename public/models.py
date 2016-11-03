@@ -29,3 +29,7 @@ class Comment(models.Model):
   created_date = models.DateTimeField(default=timezone.now)
   def __unicode__(self):
     return self.text
+  def publish(self):
+    self.published_date = timezone.now()
+    self.save()
+
