@@ -1,0 +1,4 @@
+Django==1.9.11
+docopt==0.6.2
+requests==2.11.1
+yarg==0.1.9
