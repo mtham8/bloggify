@@ -18,7 +18,7 @@ class Post(models.Model):
   def publish(self):
     self.published_date = timezone.now()
     self.save()
-  def __unicode__(self):
+  def __str__(self):
     return self.title
 
 # Model to post comments
@@ -27,7 +27,7 @@ class Comment(models.Model):
   text = models.TextField()
   post = models.ForeignKey(Post)
   created_date = models.DateTimeField(default=timezone.now)
-  def __unicode__(self):
+  def __str__(self):
     return self.text
   def publish(self):
     self.published_date = timezone.now()
