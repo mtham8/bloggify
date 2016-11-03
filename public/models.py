@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+from django_markdown.models import MarkdownField
+
 # Create your models here.
 
 # To add models ==> python manage.py makemigrations {{name}}
@@ -12,7 +14,7 @@ from django.contrib.auth.models import User
 class Post(models.Model):
   author = models.ForeignKey(User)
   title = models.CharField(max_length=200)
-  text = models.TextField()
+  text = MarkdownField()
   created_date = models.DateTimeField(default=timezone.now)
   published_date = models.DateTimeField(blank=True, null=True)
   def publish(self):
@@ -24,7 +26,7 @@ class Post(models.Model):
 # Model to post comments
 class Comment(models.Model):
   name = models.CharField(max_length=42)
-  text = models.TextField()
+  text = MarkdownField()
   post = models.ForeignKey(Post)
   created_date = models.DateTimeField(default=timezone.now)
   def __str__(self):

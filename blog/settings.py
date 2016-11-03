@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'public',
+    'django_markdown',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -135,3 +136,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Markdown
+MARKDOWN_EDITOR_SKIN = 'simple'
+MARKDOWN_EXTENSIONS = ['extra', 'codehilite', 'fenced_code']
+MARKDOWN_EXTENSION_CONFIGS = {
+    'codehilite': {
+        'linenums': True,
+        'guess_lang': True
+    }
+}
